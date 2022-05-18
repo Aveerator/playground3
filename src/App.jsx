@@ -1,7 +1,7 @@
 import { createSignal, For } from 'solid-js';
 import './main.css';
 
-const NASA_API_KEY = U2gbA37HniOM2Mv22N8tP0RS4LitQ16PHZFHZJ6Y//api key lolz
+const NASA_API_KEY = "U2gbA37HniOM2Mv22N8tP0RS4LitQ16PHZFHZJ6Y"//api key lolz
 let link
 let title
 
@@ -37,7 +37,6 @@ const linkSplitAndSet = (data) => {
   let splitArr = data.message.split('/')
   let breed = splitArr[4]
   const breedName = breed.replace(/-/g, ' ')
-  console.log(breedName)
   setImage([{ link: data.message, title: breedName }, ...images()])
 }
 
@@ -49,6 +48,8 @@ function App() {
   return <div class="main">
     <div class="title">
       <p>Galeria obrazków z kilkoma opcjami</p>
+
+      <a href="https://github.com/Aveerator/playground3/" class="s">Source Code</a>
     </div>
     <div class="scroll">
       <p>Size: {dim()}px </p>
@@ -56,12 +57,12 @@ function App() {
     </div>
 
     <div class="form">
-      Link: 
+      Link:
       <input type="text" class="text-input" ref={link}>Link</input><br />
-      Title: 
+      Title:
       <input type="text" class="text-input" ref={title}>Title</input><br />
       <button onClick={doShit}>Zastosuj</button>
-      <button onClick={clearArray}>Wyczyść</button><br/>
+      <button onClick={clearArray}>Wyczyść</button><br />
       <button onClick={randomDog}>Losowy pies</button>
       <button onClick={randomGalaxy}>Losowe zdjęcie z kosmosu</button>
     </div>
