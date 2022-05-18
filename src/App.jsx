@@ -1,7 +1,7 @@
 import { createSignal, For } from 'solid-js';
 import './main.css';
 
-const NASA_API_KEY = 1//api key lolz
+const NASA_API_KEY = U2gbA37HniOM2Mv22N8tP0RS4LitQ16PHZFHZJ6Y//api key lolz
 let link
 let title
 
