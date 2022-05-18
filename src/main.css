@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  transition: width 1s, height 1s;
+  margin: 10px;
+}
+
+.image-div {
+  width: calc(var(--width-and-height) * 1px);
+  height: calc(var(--width-and-height) * 1px);
+  align-content: center;
+  justify-content: center;
+  margin: 5px;
+  overflow: hidden;
+  transition: width 1s, height 1s;
+  position: relative;
+  bottom: 0px;
+}
+
+.image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: center;
+  top: 10%;
+  grid-column: 1 / 4;
+}
+
+.main {
+  display: grid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+  background-color: #E8E5DA;
+}
+button {
+  background-color: #9EB7E5;
+  border: 0;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+}
+button:hover {
+  background-color: #648DE5;
+}
+
+button:active {
+  background-color: #9EB7E5;
+}
+
+.text-input {
+  width: 80%;
+  background-color: #9EB7E5;
+  padding: 10px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.text-input:focus {
+  outline: none !important;
+  background-color: #648DE5;
+}
+
+.slider {
+  width: 80%;
+  padding: 10px;
+  background-color: #9EB7E5;
+  appearance: none;
+  border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #648DE5;
+  cursor: pointer;
+  border: 0;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #648DE5;
+  cursor: pointer;
+  border: 0;
+}
+
+.img-title {
+  transition: width 1s, height 1s;
+  max-width: calc(var(--width-and-height) * 1px);
+  overflow-wrap: normal;
+  text-transform: capitalize;
+}
+
+.title, .scroll, .form {
+  height: min-content;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  display: grid;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .main {
+    display: block;
+  }
+
+}
