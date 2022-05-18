@@ -1,7 +1,7 @@
 import { createSignal, For } from 'solid-js';
 import './main.css';
 
-
+const NASA_API_KEY = 1//api key lolz
 let link
 let title
 
@@ -28,7 +28,7 @@ const randomDog = () => {
 
 
 const randomGalaxy = () => {
-  fetch('https://api.nasa.gov/planetary/apod?api_key=U2gbA37HniOM2Mv22N8tP0RS4LitQ16PHZFHZJ6Y&count=1')
+  fetch(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}&count=1`)
     .then(response => response.json())
     .then(data => setImage([{ link: data[0].url, title: data[0].title }, ...images()]))
 }
