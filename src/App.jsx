@@ -40,14 +40,10 @@ const linkSplitAndSet = (data) => {
   setImage([{ link: data.message, title: breedName }, ...images()])
 }
 
-const clearArray = () => {
-  setImage([])
-}
-
 function App() {
   return <div class="main">
     <div class="title">
-      <p>Galeria obrazków z kilkoma opcjami</p>
+      <p>Galeria obrazków z kilkoma opcjami. Napisana z użyciem SolidJS jako frontendu i FastAPI jako backendu</p>
 
       <a href="https://github.com/Aveerator/playground3/" class="s">Source Code</a>
     </div>
@@ -62,7 +58,7 @@ function App() {
       Title:
       <input type="text" class="text-input" ref={title}>Title</input><br />
       <button onClick={doShit}>Zastosuj</button>
-      <button onClick={clearArray}>Wyczyść</button><br />
+      <button onClick={setImage([])}>Wyczyść</button><br />
       <button onClick={randomDog}>Losowy pies</button>
       <button onClick={randomGalaxy}>Losowe zdjęcie z kosmosu</button>
     </div>
